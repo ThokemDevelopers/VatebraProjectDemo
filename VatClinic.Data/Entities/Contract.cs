@@ -6,7 +6,7 @@ using System.Text;
 
 namespace VatClinic.Data.Entities
 {
-   public  class Contract
+   public  class Contract : BaseEntity
     {
         [ForeignKey("ID")]
         public long PatientId { get; set; }

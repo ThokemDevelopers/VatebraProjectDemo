@@ -12,6 +12,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using VatClinic.Data;
+using VatClinic.Data.Entities;
+using VatClinic.Data.Repository;
+using VatClinic.Data.Repository.Interface;
+using VatClinic.Domain.ApiResponseModel;
+using VatClinic.Domain.Services;
+using VatClinic.Domain.Services.Interface;
 
 namespace VatClinic
 {
@@ -29,7 +35,14 @@ namespace VatClinic
         {
             services.AddDbContext<VatClinicDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+
+            services.AddScoped<IPatientRepo<Patient>, PatientRepo>();
+
+
+            services.AddScoped<IPatientService<PatientResponse>, PatientService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

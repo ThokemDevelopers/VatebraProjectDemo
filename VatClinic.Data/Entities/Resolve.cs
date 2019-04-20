@@ -5,7 +5,7 @@ using System.Text;
 
 namespace VatClinic.Data.Entities
 {
-    public class Resolve
+    public class Resolve : BaseEntity
     {
        
         public long AilmentId { get; set; }

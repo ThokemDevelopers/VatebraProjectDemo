@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+using VatClinic.Data.Entities;
 
-namespace VatClinic.Data.Entities
+namespace VatClinic.Domain.ApiResponseModel
 {
-    public class Patient : BaseEntity
+    public  class PatientResponse
     {
-        
-
         [Required]
         [StringLength(20)]
-        public string  Name { get; set; }
+        public string Name { get; set; }
 
         [Required]
         [StringLength(10)]
@@ -21,13 +18,16 @@ namespace VatClinic.Data.Entities
         [Required]
         public int Age { get; set; }
 
-
         public ICollection<Contract> Contracts { get; set; }
 
-
-        public Patient()
+        public PatientResponse()
         {
             Contracts = new Collection<Contract>();
         }
+
+        
+
+
+       
     }
 }

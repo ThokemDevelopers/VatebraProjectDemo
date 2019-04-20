@@ -16,7 +16,7 @@ namespace VatClinic.Data.Entities
         
         [Required]
         [StringLength(20)]
-        public string Symtoms { get; set; }
+        public string Symptoms { get; set; }
 
         public ICollection<Resolve> Resolves { get; set; }
         public ICollection<Contract> Contracts { get; set; }

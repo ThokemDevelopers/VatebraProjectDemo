@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VatClinic.Data\VatClinic.Data.csproj" />
+    <ProjectReference Include="..\VatClinic.Domain\VatClinic.Domain.csproj" />
   </ItemGroup>
 
 </Project>

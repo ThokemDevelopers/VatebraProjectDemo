@@ -14,8 +14,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\VatClinic.Domain\VatClinic.Domain.csproj" />
-  </ItemGroup>
-
 </Project>
